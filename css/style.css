@@ -1,0 +1,42 @@
+.bg-image {
+   background-position: center;
+   background-size: cover;
+
+  background-image: url("../images/discworldbackground.jpg");
+  /* background-repeat: no-repeat;
+
+ */
+  height: 100vh;
+}
+.container {
+  border: 2px solid yellow;
+}
+
+.translate-middle {
+  border: 2px solid blue;
+}
+
+.covers {
+  height: 140px;
+  width: 90px;
+  border: 3px solid black;
+}
+
+.clock {
+    color: #17D4FE;
+    font-family: Orbitron;
+    letter-spacing: 2px;
+}
+
+.navbar-brand {
+  color: #17D4FE !important;
+}
+
+@media screen and (orientation: portrait) and (max-width: 790px) {
+  .bg-image {
+    height: 50vh;
+  }
+  .navbar-brand {
+  color: purple !important;
+}
+}
