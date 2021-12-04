@@ -1,13 +1,17 @@
 .bg-image {
-   background-position: center;
-   background-size: cover;
-
+  background-position: center;
+  background-size: cover;
   background-image: url("../images/discworldbackground.jpg");
-  /* background-repeat: no-repeat;
-
- */
+  /* background-repeat: no-repeat; */
+  background-color: aliceblue;
   height: 100vh;
+     /* filter:sepia(100%); */
+  /* opacity: 0.9; */
+  /* filter: blur(3px);
+  -webkit-filter: blur(3px); */
+
 }
+
 .container {
   border: 2px solid yellow;
 }
@@ -23,13 +27,18 @@
 }
 
 .clock {
-    color: #17D4FE;
-    font-family: Orbitron;
-    letter-spacing: 2px;
+  color: #17D4FE;
+  font-family: Orbitron;
+  letter-spacing: 2px;
 }
 
 .navbar-brand {
   color: #17D4FE !important;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(178, 60, 253, 0.2);
 }
 
 @media screen and (orientation: portrait) and (max-width: 790px) {
@@ -38,5 +47,5 @@
   }
   .navbar-brand {
   color: purple !important;
-}
+  }
 }
