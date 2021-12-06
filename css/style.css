@@ -1,29 +1,37 @@
 .bg-image {
   background-position: center;
   background-size: cover;
-  background-image: url("../images/discworldbackground.jpg");
+  background-image: url("../images/discworldbackground1.avif");
   /* background-repeat: no-repeat; */
-  background-color: aliceblue;
+  background-color: pink;
   height: 100vh;
-     /* filter:sepia(100%); */
-  /* opacity: 0.9; */
-  /* filter: blur(3px);
+  transition: filter 1s, opacity 1s;
+  transition-timing-function: linear;
+
+  /*   filter:sepia(100%);
+  opacity: 0.5;
+  filter: blur(3px);
   -webkit-filter: blur(3px); */
+}
+/* border: 2px solid yellow; */
+/* #book {
 
+opacity: 0;
+transition: opacity 2.5s ease-in-out;
+} */
+
+#quote {
+  opacity: 0;
+  transition: opacity 5.5s;
 }
 
-.container {
-  border: 2px solid yellow;
-}
-
-.translate-middle {
+/* .translate-middle {
   border: 2px solid blue;
-}
+} */
 
-.covers {
+.covers > img {
   height: 140px;
   width: 90px;
-  border: 3px solid black;
 }
 
 .clock {
@@ -36,9 +44,36 @@
   color: #17D4FE !important;
 }
 
+.quote {
+  text-align: center;
+}
+
 .mask-custom {
   backdrop-filter: blur(5px);
   background-color: rgba(178, 60, 253, 0.2);
+}
+h2 {
+  font-style: italic;
+}
+
+hr {
+  border: red 1px solid;
+  width: 30px;
+  margin: auto;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  opacity: .7;
+    margin-bottom: .7rem;
+  text-align: center;
+}
+
+#mybutton {
+  border-radius: 5px;
+  background-color: #17D4FE;
+  border: none;
+  padding: 10px;
+  margin-top: 1.5rem;
+  font-weight: bold;
 }
 
 @media screen and (orientation: portrait) and (max-width: 790px) {
