@@ -170,6 +170,8 @@ remove_img();
 // document.getElementById("quote").style.transitionDelay = "2s";
 // function add_img(x) {
   // NEW IMAGE 'a bi bak!
+  // https://stackoverflow.com/questions/29640486/is-there-any-way-to-have-a-transition-effect-when-changing-the-innerhtml
+  // BURADAKI KODA BI BAK, YUKARIDAKI IKI OBJEYI TEK OBJE YAPABILIRIM
 //   var img = document.createElement('img');
 //   img.src = images[x].src;
 //   document.getElementById('covers').appendChild(img);
@@ -200,7 +202,10 @@ function mask() {
   // containerElement.setAttribute('class', 'mask');
   containerElement.style.filter = "sepia(100%)";
   containerElement.style.opacity = "0.5";
-  document.getElementById('quote').style.opacity = "1";
+  document.getElementById('clockDisplay').style.fontWeight = "bold";
+  document.getElementById('navbar').style.fontWeight = "bold";
+  document.getElementById('contain').style.opacity = "1";
+  document.getElementById('header').style.display = "none";
 }
 
 
@@ -236,8 +241,8 @@ function showTime() {
   m = (m < 10) ? "0" + m : m;
 
   let time = dayName + " " + h + ":" + m + " " + session;
-  document.getElementById("ClockDisplay").innerText = time;
-  document.getElementById("ClockDisplay").textContent = time;
+  document.getElementById("clockDisplay").innerText = time;
+  document.getElementById("clockDisplay").textContent = time;
 
   setTimeout(showTime, 1000);
 }

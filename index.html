@@ -7,6 +7,9 @@
   <title>Discworld Quote Generator with Digital Clock</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -19,13 +22,13 @@
 
   <nav class="navbar fixed-top navbar-light bg-transparent px-3">
     <div class="container-fluid">
-      <a class="navbar-brand" href=".">
+      <a class="navbar-brand" id="navbar" href=".">
         <img src="images/logosmall.png" alt="logo" width="30" height="24"
           class="d-inline-block align-text-top">
         Home
       </a>
       <span class="navbar-text">
-        <div id="ClockDisplay" class="clock" onload="showTime()"></div>
+        <div id="clockDisplay" class="clock" onload="showTime()"></div>
       </span>
     </div>
   </nav>
@@ -33,7 +36,7 @@
   <div class="container position-absolute top-50 start-50 translate-middle ">
     <header>
       <div class="container d-flex flex-column align-items-center" id="contain">
-      <h3>The Discworld</h3>
+      <h3 id="header">The Discworld Quote Generator</h3>
       <h1 class="quote" id="quote"></h1>
       <!-- <hr class="border border-primary"> -->
       <h2 class="book" id="book"></h2>
