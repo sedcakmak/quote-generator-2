@@ -1,3 +1,14 @@
+html {
+  font-size: calc(60% + 0.8vmin);
+}
+
+* {
+  font-size: 1rem;
+}
+
+body {
+  height: 100vh;
+}
 
 .bg-image {
   background-position: center;
@@ -5,35 +16,44 @@
   background-image: url("../images/discworldbackground.jpg");
   background-color: #2A445D;
   height: 100vh;
-  transition: all 1s;
+  transition: filter 5s, opacity 5s, transform 3s;
   transition-timing-function: linear;
 }
 
 #contain {
   opacity: 0;
-  transition: opacity 5s;
+  transition: ease-in opacity 1s;
+  transition-delay: 2.2s;
 }
 
 .covers > img {
   height: 140px;
   width: 90px;
-  transition: transform .3s;
+  transition:  transform .3s;
 }
 
 .covers > img:hover {
-transform: translateY(-7px);
+  transform: translateY(-7px);
 }
+#clockDisplay, .navbar-brand, .reload {
+  transition: font-weight 2s, color 5s;
+  transition-delay: 2.2s;
 
-#clockDisplay {
-  color: #17D4FE;
   font-family: Orbitron;
   letter-spacing: 2px;
-  transition: 1s;
 }
 
-.navbar-brand {
-  color: #17D4FE !important;
-   transition: fontWeight 1s;
+#clockDisplay, .link-reload {
+ color: #17D4FE;
+
+}
+.link-reload {
+  display: none;
+}
+
+.reload {
+  color: purple !important;
+  font-weight: 700;
 }
 
 .quote {
@@ -42,16 +62,11 @@ transform: translateY(-7px);
   font-weight: bold;
 }
 
-.mask-custom {
-  backdrop-filter: blur(5px);
-  background-color: rgba(178, 60, 253, 0.2);
-}
-
 h2 {
   font-style: italic;
-   font-family: 'Lusitana', serif;
-   font-weight: bold;
-   font-size: 26px;
+  font-family: 'Lusitana', serif;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 h3 {
@@ -74,38 +89,54 @@ hr {
 
 .button {
   border-radius: 5px;
-  background-color: #0fa1c2;
+  background-color: #179afe;
   border: none;
   padding: 10px;
   margin-top: 1.5rem;
   font-weight: bold;
   font-style: italic;
-  transition: background-image 1s;
+  -webkit-transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
+  transition: box-shadow 500ms ease-in-out, color 500ms ease-in-out;
 }
 
 .button:hover {
-  background-image: linear-gradient(to right,#0fa1c2, #17D4FE);
-  animation:slidebg 1s linear;
-  animation-iteration-count: 1;
-  opacity: 1;
-}
-
-@keyframes slidebg {
-  to {
-    background-position:20vw;
-  }
+  box-shadow: 0 0 40px 40px #17D4FE inset;
 }
 
 #secondbutton {
   display: none;
-  transition: all 5s;
+  border: 1px solid purple;
 }
+
+.fa-2x {
+  vertical-align: middle;
+  color: purple;
+}
+
+/* .top-80 {
+  transform: translate(-66%,-60%)!important;
+  top: 90% !important;
+  left: 98.5% !important;
+
+} */
 
 @media screen and (orientation: portrait) and (max-width: 790px) {
   .bg-image {
     height: 50vh;
   }
+  body {
+    background-color: 	#FFFCE0;
+  }
   .navbar-brand {
   color: purple !important;
   }
+  .navbar-brand span {
+    display: none;
+  }
+  html {
+  font-size: calc(80% + 0.8vmin);
+}
+h1 {
+    font-size: calc(1rem + 1.5vw);
+}
 }

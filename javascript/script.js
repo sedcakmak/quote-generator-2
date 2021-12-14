@@ -126,6 +126,16 @@ function generateQuote() {
   document.getElementById("covers").appendChild(img);
 }
 
+  // let rotation = 0;
+  // function rotateImg() {
+  //   rotation += 180;
+  //   if (rotation === 360) {
+  //     // 360 means rotate back to 0
+  //     rotation = 0;
+  //   }
+  //   document.querySelector(".bg-image").style.transform = `rotateY(${rotation}deg)`;
+  // }
+
   function remove_img() {
     function removeAllChildNodes(parent) {
       while (parent.firstChild) {
@@ -141,37 +151,30 @@ function generateQuote() {
   // parent.innerHTML = '';
   // }
 
-
-
-function changeButton() {
-  const button = document.getElementById('firstbutton');
-  button.style.display = "none";
-  document.getElementById('secondbutton').style.display = "inline";
-}
-
-
-// function changeButton() {
-//   const button = document.getElementById('mybutton');
-//   button.style.opacity = "0";
-//   button.innerHTML = "Brighten my day up more!";
-
-//   setTimeout(() => {
-//     button.style.opacity = "1";
-//   }, 2000);
-// }
-// clearTimeout();
-
 function mask() {
   const containerElement = document.getElementById('bg');
-  // containerElement.setAttribute('class', 'mask');
   containerElement.style.filter = "sepia(100%)";
   containerElement.style.opacity = "0.5";
-  document.getElementById('clockDisplay').style.fontWeight = "bold";
-  document.getElementById('navbar').style.fontWeight = "bold";
+  containerElement.style.transform = "rotateY(180deg)";
+
+
+
+
   document.getElementById('contain').style.opacity = "1";
   document.getElementById('header').style.display = "none";
-}
+  const button = document.getElementById('firstbutton');
+  button.style.display = "none";
+  button.style.opacity = "0";
+  document.getElementById('clockDisplay').setAttribute('class', 'reload');
 
+setTimeout(() => {
+
+  document.getElementById('secondbutton').style.display = "inline";
+  document.getElementById('secondbutton').style.opacity = "1";
+  document.querySelector(".link-reload").innerHTML = "Back to Original Discworld";
+  document.querySelector('.link-reload').setAttribute('class', 'reload');
+}, 2500);
+}
 
 function showTime() {
   let date = new Date();
