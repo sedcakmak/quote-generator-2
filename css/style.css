@@ -1,37 +1,27 @@
+
 .bg-image {
   background-position: center;
   background-size: cover;
-  background-image: url("../images/discworldbackground1.avif");
-  /* background-repeat: no-repeat; */
-  background-color: pink;
+  background-image: url("../images/discworldbackground.jpg");
+  background-color: #2A445D;
   height: 100vh;
-  transition: filter 1s, opacity 1s;
+  transition: all 1s;
   transition-timing-function: linear;
-
-  /*   filter:sepia(100%);
-  opacity: 0.5;
-  filter: blur(3px);
-  -webkit-filter: blur(3px); */
 }
-/* border: 2px solid yellow; */
-/* #book {
-
-opacity: 0;
-transition: opacity 2.5s ease-in-out;
-} */
 
 #contain {
   opacity: 0;
-  transition: opacity 5.5s;
+  transition: opacity 5s;
 }
-
-/* .translate-middle {
-  border: 2px solid blue;
-} */
 
 .covers > img {
   height: 140px;
   width: 90px;
+  transition: transform .3s;
+}
+
+.covers > img:hover {
+transform: translateY(-7px);
 }
 
 #clockDisplay {
@@ -56,6 +46,7 @@ transition: opacity 2.5s ease-in-out;
   backdrop-filter: blur(5px);
   background-color: rgba(178, 60, 253, 0.2);
 }
+
 h2 {
   font-style: italic;
    font-family: 'Lusitana', serif;
@@ -77,17 +68,37 @@ hr {
   margin-top: 1.5rem;
   font-weight: bold;
   opacity: .7;
-    margin-bottom: .7rem;
+  margin-bottom: .7rem;
   text-align: center;
 }
 
-#mybutton {
+.button {
   border-radius: 5px;
-  background-color: #17D4FE;
+  background-color: #0fa1c2;
   border: none;
   padding: 10px;
   margin-top: 1.5rem;
   font-weight: bold;
+  font-style: italic;
+  transition: background-image 1s;
+}
+
+.button:hover {
+  background-image: linear-gradient(to right,#0fa1c2, #17D4FE);
+  animation:slidebg 1s linear;
+  animation-iteration-count: 1;
+  opacity: 1;
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
+}
+
+#secondbutton {
+  display: none;
+  transition: all 5s;
 }
 
 @media screen and (orientation: portrait) and (max-width: 790px) {
