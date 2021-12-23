@@ -12,12 +12,12 @@ function generateQuote() {
     },
     {
     book: "Mort",
-    quote: "“THAT’S MORTALS FOR YOU, Death continued. THEY’VE ONLY GOT A FEW YEARS IN THIS WORLD AND THEY SPEND THEM ALL IN MAKING THINGS COMPLICATED FOR THEMSELVES. FASCINATING.”",
+      quote: "“ᴛʜᴀᴛ's ᴍᴏʀᴛᴀʟs ғᴏʀ ʏᴏᴜ, Death continued. ᴛʜᴇʏ'ᴠᴇ ᴏɴʟʏ ɢᴏᴛ ᴀ ғᴇᴡ ʏᴇᴀʀs ɪɴ ᴛʜɪs ᴡᴏʀʟᴅ ᴀɴᴅ ᴛʜᴇʏ sᴘᴇɴᴅ ᴛʜᴇᴍ ᴀʟʟ ɪɴ ᴍᴀᴋɪɴɢ ᴛʜɪɴɢs ᴄᴏᴍᴘʟɪᴄᴀᴛᴇᴅ ғᴏʀ ᴛʜᴇᴍsᴇʟᴠᴇs. ғᴀsᴄɪɴᴀᴛɪɴɢ.”",
     image_src: '../images/mort.jpg'
     },
     {
     book: "Mort",
-    quote: "“I USHERED SOULS INTO THE NEXT WORLD. I WAS THE GRAVE OF ALL HOPE. I WAS THE ULTIMATE REALITY. I WAS THE ASSASSIN AGAINST WHOM NO LOCK WOULD HOLD.”~ “Yes, point taken, but do you have any particular skills?”",
+      quote: "“ɪ ᴜsʜᴇʀᴇᴅ sᴏᴜʟs ɪɴᴛᴏ ɴᴇxᴛ ᴡᴏʀʟᴅ. ɪ ᴡᴀs ᴛʜᴇ ɢʀᴀᴠᴇ ᴏғ ᴀʟʟ ʜᴏᴘᴇ. ɪ ᴡᴀs ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ʀᴇᴀʟɪᴛʏ. ɪ ᴡᴀs ᴛʜᴇ ᴀssᴀssɪɴ ᴀɢᴀɪɴsᴛ ᴡʜᴏᴍ ɴᴏ ʟᴏᴄᴋ ᴡᴏᴜʟᴅ ʜᴏʟᴅ.”~ “Yes, point taken, but do you have any particular skills?”",
     image_src: '../images/mort.jpg'
     },
     {
@@ -87,7 +87,7 @@ function generateQuote() {
     },
     {
     book:"Death's Domain",
-    quote: "“THERE ARE BETTER THINGS IN THE WORLD THAN ALCOHOL, ALBERT.” ~ “Oh, yes, sir. But alcohol sort of compensates for not getting them.”",
+      quote: "“ᴛʜᴇʀᴇ ᴀʀᴇ ʙᴇᴛᴛᴇʀ ᴛʜɪɴɢs ɪɴ ᴛʜᴇ ᴡᴏʀʟᴅ ᴛʜᴀɴ ᴀʟᴄᴏʜᴏʟ, ᴀʟʙᴇʀᴛ.” ~ “Oh, yes, sir. But alcohol sort of compensates for not getting them.”",
     image_src: '../images/deathsdomain.jpg'
     },
     {
@@ -116,6 +116,9 @@ function generateQuote() {
   const quotebase = fullquotes[random_index];
   const quote = quotebase.quote.split('~').join('<br>');
 
+  // const upperCaseWords = quote.match(/(\b[A-Z][A-Z]+|\b[A-Z]\b)/g);
+  // const late = upperCaseWords.style.fontVariant = "small-caps";
+
   document.getElementById("quote").innerHTML = quote;
   let element = document.createElement('hr');
   document.getElementById("quote").appendChild(element);
@@ -125,6 +128,16 @@ function generateQuote() {
   img.src = quotebase.image_src;
   document.getElementById("covers").appendChild(img);
 }
+
+  // let rotation = 0;
+  // function rotateImg() {
+  //   rotation += 180;
+  //   if (rotation === 360) {
+  //     // 360 means rotate back to 0
+  //     rotation = 0;
+  //   }
+  //   document.querySelector(".bg-image").style.transform = `rotateY(${rotation}deg)`;
+  // }
 
   function remove_img() {
     function removeAllChildNodes(parent) {
@@ -141,37 +154,30 @@ function generateQuote() {
   // parent.innerHTML = '';
   // }
 
-
-
-function changeButton() {
-  const button = document.getElementById('firstbutton');
-  button.style.display = "none";
-  document.getElementById('secondbutton').style.display = "inline";
-}
-
-
-// function changeButton() {
-//   const button = document.getElementById('mybutton');
-//   button.style.opacity = "0";
-//   button.innerHTML = "Brighten my day up more!";
-
-//   setTimeout(() => {
-//     button.style.opacity = "1";
-//   }, 2000);
-// }
-// clearTimeout();
-
 function mask() {
   const containerElement = document.getElementById('bg');
-  // containerElement.setAttribute('class', 'mask');
   containerElement.style.filter = "sepia(100%)";
   containerElement.style.opacity = "0.5";
-  document.getElementById('clockDisplay').style.fontWeight = "bold";
-  document.getElementById('navbar').style.fontWeight = "bold";
-  document.getElementById('contain').style.opacity = "1";
-  document.getElementById('header').style.display = "none";
-}
+  containerElement.style.transform = "rotateY(180deg)";
 
+
+
+
+  document.getElementById('contain').style.opacity = "1";
+  // document.getElementById('header').style.display = "none";
+  const button = document.getElementById('firstbutton');
+  button.style.display = "none";
+  button.style.opacity = "0";
+  document.getElementById('clockDisplay').setAttribute('class', 'reload');
+
+setTimeout(() => {
+
+  document.getElementById('secondbutton').style.display = "inline";
+  document.getElementById('secondbutton').style.opacity = "1";
+  document.querySelector(".link-reload").innerHTML = "Back to Original Discworld";
+  document.querySelector('.link-reload').setAttribute('class', 'reload');
+}, 2500);
+}
 
 function showTime() {
   let date = new Date();
