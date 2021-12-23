@@ -2,6 +2,7 @@ For this project, I built a quote generator from Terry Pratchett's Discworld nov
 
 * I started the project by creating two objects; first object was a key-value pair of book titles and quotes. The second object was the book cover images. Then I combined them with an if clause. It worked, but it was a loong code:) So I refactured it into an array of objects. (Stored the original code on firstversion branch)
 * Lighthouse suggested that I should use avif image as the background image. It works on Chrome, but not on other browsers. I tried adding a fallback background image, but it didn't improve my performance on Lighthouse report. I ended up using jpg.
+* The images for the book covers didn't work on GitHub page, (checked console to see a 404Error). I corrected the path, now it's working.
 
 ## The problems I couldn't solve (yet):
 * I couldn't fade in and fade out the quotes when they're generated onclick. If I had  managed that, this would've been a different page:)
