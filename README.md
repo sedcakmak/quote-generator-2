@@ -1,3 +1,5 @@
+sedcakmak.github.io/quote-generator-2/
+
 For this project, I built a quote generator from Terry Pratchett's Discworld novels. Instead of an API, this time I provided the quotes as an array of JS objects. I also combined the project with a digital clock that appears on the right corner of the page. I used Bootstrap 5 hoping it'll create a responsive design.
 
 * Lighthouse suggested that I should use avif image as the background image. It works on Chrome, but not on other browsers. I tried adding a fallback background image, but it didn't improve my performance on Lighthouse report. I ended up using jpg.
