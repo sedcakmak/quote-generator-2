@@ -14,7 +14,7 @@ body {
   background-position: center;
   background-size: cover;
   background-image: url("../images/discworldbackground.jpg");
-  background-color: #2A445D;
+  background-color: #2a445d;
   height: 100vh;
   transition: filter 5s, opacity 5s, transform 3s;
   transition-timing-function: linear;
@@ -29,13 +29,15 @@ body {
 .covers > img {
   height: 140px;
   width: 90px;
-  transition:  transform .3s;
+  transition: transform 0.3s;
 }
 
 .covers > img:hover {
   transform: translateY(-7px);
 }
-#clockDisplay, .navbar-brand, .reload {
+#clockDisplay,
+.navbar-brand,
+.reload {
   transition: font-weight 2s, color 5s;
   transition-delay: 2.2s;
 
@@ -43,9 +45,9 @@ body {
   letter-spacing: 2px;
 }
 
-#clockDisplay, .link-reload {
- color: #17D4FE;
-
+#clockDisplay,
+.link-reload {
+  color: #17d4fe;
 }
 .link-reload {
   display: none;
@@ -58,19 +60,19 @@ body {
 
 .quote {
   text-align: center;
-  font-family: 'Lusitana', serif;
+  font-family: "Lusitana", serif;
   font-weight: bold;
 }
 
 h2 {
   font-style: italic;
-  font-family: 'Lusitana', serif;
+  font-family: "Lusitana", serif;
   font-weight: bold;
   font-size: 2rem;
 }
 
 h3 {
-  color: #17D4FE;
+  color: #17d4fe;
   font-weight: bold;
   opacity: 1 !important;
   visibility: visible;
@@ -82,8 +84,8 @@ hr {
   margin: auto;
   margin-top: 1.5rem;
   font-weight: bold;
-  opacity: .7;
-  margin-bottom: .7rem;
+  opacity: 0.7;
+  margin-bottom: 0.7rem;
   text-align: center;
 }
 
@@ -100,7 +102,7 @@ hr {
 }
 
 .button:hover {
-  box-shadow: 0 0 40px 40px #17D4FE inset;
+  box-shadow: 0 0 40px 40px #17d4fe inset;
 }
 
 #secondbutton {
@@ -113,31 +115,23 @@ hr {
   color: purple;
 }
 
-/* .top-80 {
-  transform: translate(-66%,-60%)!important;
-  top: 90% !important;
-  left: 98.5% !important;
-
-} */
-
-
 @media screen and (orientation: portrait) and (max-width: 790px) {
   .bg-image {
     height: 50vh;
   }
   body {
-    background-color: #FFFCE0;
+    background-color: #fffce0;
   }
   .navbar-brand {
-  color: purple !important;
+    color: purple !important;
   }
   .navbar-brand span {
     display: none;
   }
   html {
-  font-size: calc(80% + 0.8vmin);
-}
-h1 {
+    font-size: calc(80% + 0.8vmin);
+  }
+  h1 {
     font-size: calc(1rem + 1.5vw);
-}
+  }
 }
