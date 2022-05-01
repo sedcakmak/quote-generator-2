@@ -1,1 +1,1 @@
-For this project, I built a quote generator from Terry Pratchett's Discworld novels. Instead of an API, this time I provided the quotes as an array of JS objects. I also combined the project with a digital clock that appears on the right corner of the page. I used Bootstrap 5..
+For this project, I built a quote generator from Terry Pratchett's Discworld novels. Instead of an API, this time I provided the quotes as an array of JS objects. I also combined the project with a digital clock that appears on the right corner of the page. I used Bootstrap 5.
